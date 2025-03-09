@@ -7,9 +7,9 @@
   "paths": {
     "/calendars/events/sync": {
       "post": {
-        "tags": [
-          "Calendar"
-        ],
+        "tags": ["Calendar"],
+        "summary": "Sync calendar events",
+        "description": "Synchronizes calendar meetings with the system.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -50,9 +50,9 @@
     },
     "/calendars/webhooks/recall": {
       "post": {
-        "tags": [
-          "Calendar"
-        ],
+        "tags": ["Calendar"],
+        "summary": "Handle Recall webhook",
+        "description": "Processes incoming webhooks from Recall service.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -90,9 +90,9 @@
     },
     "/clients": {
       "post": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
+        "summary": "Create client",
+        "description": "Creates a new client in the system.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -148,9 +148,9 @@
         }
       },
       "get": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
+        "summary": "Get clients",
+        "description": "Retrieves a list of all clients.",
         "parameters": [
           {
             "name": "Search",
@@ -195,9 +195,9 @@
     },
     "/clients/{clientId}": {
       "get": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
+        "summary": "Get client details",
+        "description": "Retrieves detailed information about a specific client.",
         "parameters": [
           {
             "name": "clientId",
@@ -233,9 +233,9 @@
         }
       },
       "put": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
+        "summary": "Update client",
+        "description": "Updates an existing client's information.",
         "parameters": [
           {
             "name": "clientId",
@@ -302,9 +302,9 @@
         }
       },
       "delete": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
+        "summary": "Delete client",
+        "description": "Deletes a client from the system.",
         "parameters": [
           {
             "name": "clientId",
@@ -325,9 +325,9 @@
     },
     "/clients/{clientId}/ask": {
       "get": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
+        "summary": "Ask about client",
+        "description": "Retrieves AI-generated insights about a specific client.",
         "parameters": [
           {
             "name": "clientId",
@@ -382,9 +382,9 @@
     },
     "/companies": {
       "post": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
+        "summary": "Create company",
+        "description": "Creates a new company in the system.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -442,9 +442,9 @@
     },
     "/companies/join/{token}": {
       "post": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
+        "summary": "Join company",
+        "description": "Allows a user to join an existing company using an invitation token.",
         "parameters": [
           {
             "name": "token",
@@ -482,9 +482,9 @@
     },
     "/integrations/{integration}": {
       "delete": {
-        "tags": [
-          "Integration"
-        ],
+        "tags": ["Integration"],
+        "summary": "Delete integration",
+        "description": "Removes an integration from the system.",
         "parameters": [
           {
             "name": "integration",
@@ -508,9 +508,9 @@
     },
     "/integrations": {
       "get": {
-        "tags": [
-          "Integration"
-        ],
+        "tags": ["Integration"],
+        "summary": "Get integrations",
+        "description": "Retrieves a list of all available integrations.",
         "responses": {
           "200": {
             "description": "OK",
@@ -546,9 +546,9 @@
     },
     "/meetings": {
       "post": {
-        "tags": [
-          "Meeting"
-        ],
+        "tags": ["Meeting"],
+        "summary": "Create meeting",
+        "description": "Creates a new meeting in the system.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -604,9 +604,9 @@
         }
       },
       "get": {
-        "tags": [
-          "Meeting"
-        ],
+        "tags": ["Meeting"],
+        "summary": "Get meetings",
+        "description": "Retrieves a paginated list of meetings.",
         "parameters": [
           {
             "name": "ClientId",
@@ -700,9 +700,9 @@
     },
     "/meetings/{meetingId}": {
       "put": {
-        "tags": [
-          "Meeting"
-        ],
+        "tags": ["Meeting"],
+        "summary": "Update meeting",
+        "description": "Updates an existing meeting's information.",
         "parameters": [
           {
             "name": "meetingId",
@@ -769,9 +769,9 @@
         }
       },
       "get": {
-        "tags": [
-          "Meeting"
-        ],
+        "tags": ["Meeting"],
+        "summary": "Get meeting details",
+        "description": "Retrieves detailed information about a specific meeting.",
         "parameters": [
           {
             "name": "meetingId",
@@ -807,9 +807,9 @@
         }
       },
       "delete": {
-        "tags": [
-          "Meeting"
-        ],
+        "tags": ["Meeting"],
+        "summary": "Delete meeting",
+        "description": "Deletes a meeting from the system.",
         "parameters": [
           {
             "name": "meetingId",
@@ -830,9 +830,9 @@
     },
     "/meetings/{meetingId}/bot": {
       "post": {
-        "tags": [
-          "Meeting"
-        ],
+        "tags": ["Meeting"],
+        "summary": "Create meeting bot",
+        "description": "Creates a bot for a specific meeting.",
         "parameters": [
           {
             "name": "meetingId",
@@ -870,9 +870,9 @@
     },
     "/meetings/{botId}/bot": {
       "delete": {
-        "tags": [
-          "Meeting"
-        ],
+        "tags": ["Meeting"],
+        "summary": "Delete meeting bot",
+        "description": "Removes a bot from a meeting.",
         "parameters": [
           {
             "name": "botId",
@@ -893,9 +893,9 @@
     },
     "/meetings/determine/template": {
       "get": {
-        "tags": [
-          "Meeting"
-        ],
+        "tags": ["Meeting"],
+        "summary": "Determine meeting template",
+        "description": "Determines the appropriate template type for a meeting.",
         "parameters": [
           {
             "name": "Name",
@@ -938,9 +938,9 @@
     },
     "/meetings/{meetingId}/ask-ai/stream": {
       "post": {
-        "tags": [
-          "Meeting"
-        ],
+        "tags": ["Meeting"],
+        "summary": "Ask AI about meeting",
+        "description": "Streams AI-generated responses to questions about a meeting.",
         "parameters": [
           {
             "name": "meetingId",
@@ -992,9 +992,9 @@
     },
     "/meetings/note": {
       "post": {
-        "tags": [
-          "MeetingNote"
-        ],
+        "tags": ["MeetingNote"],
+        "summary": "Create meeting note",
+        "description": "Creates a new note for a meeting.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1052,9 +1052,9 @@
     },
     "/meetings/note/{meetingId}/image": {
       "post": {
-        "tags": [
-          "MeetingNote"
-        ],
+        "tags": ["MeetingNote"],
+        "summary": "Create image note",
+        "description": "Creates a note from an uploaded image using OCR.",
         "parameters": [
           {
             "name": "meetingId",
@@ -1112,9 +1112,9 @@
     },
     "/meetings/note/{meetingId}/audio": {
       "post": {
-        "tags": [
-          "MeetingNote"
-        ],
+        "tags": ["MeetingNote"],
+        "summary": "Create audio note",
+        "description": "Creates a note from an uploaded audio file using speech-to-text.",
         "parameters": [
           {
             "name": "meetingId",
@@ -1172,9 +1172,9 @@
     },
     "/meetings/note/{noteId}": {
       "put": {
-        "tags": [
-          "MeetingNote"
-        ],
+        "tags": ["MeetingNote"],
+        "summary": "Update meeting note",
+        "description": "Updates an existing meeting note.",
         "parameters": [
           {
             "name": "noteId",
@@ -1224,9 +1224,9 @@
         }
       },
       "delete": {
-        "tags": [
-          "MeetingNote"
-        ],
+        "tags": ["MeetingNote"],
+        "summary": "Delete meeting note",
+        "description": "Deletes a note from a meeting.",
         "parameters": [
           {
             "name": "noteId",
@@ -1247,9 +1247,9 @@
     },
     "/meetings/synopsis": {
       "post": {
-        "tags": [
-          "MeetingSynopsis"
-        ],
+        "tags": ["MeetingSynopsis"],
+        "summary": "Create meeting synopsis",
+        "description": "Creates a new synopsis for a meeting.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1307,9 +1307,9 @@
     },
     "/meetings/synopsis/{synopsisId}": {
       "put": {
-        "tags": [
-          "MeetingSynopsis"
-        ],
+        "tags": ["MeetingSynopsis"],
+        "summary": "Update meeting synopsis",
+        "description": "Updates an existing meeting synopsis.",
         "parameters": [
           {
             "name": "synopsisId",
@@ -1378,9 +1378,9 @@
     },
     "/meetings/synopsis/{synopsisId}/email": {
       "post": {
-        "tags": [
-          "MeetingSynopsis"
-        ],
+        "tags": ["MeetingSynopsis"],
+        "summary": "Email meeting synopsis",
+        "description": "Sends the meeting synopsis via email to specified recipients.",
         "parameters": [
           {
             "name": "synopsisId",
@@ -1432,9 +1432,9 @@
     },
     "/meetings/synopsis/stream": {
       "post": {
-        "tags": [
-          "MeetingSynopsis"
-        ],
+        "tags": ["MeetingSynopsis"],
+        "summary": "Stream synopsis",
+        "description": "Streams the meeting synopsis generation in real-time.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1475,9 +1475,9 @@
     },
     "/meetings/transcription/{meetingId}/text": {
       "post": {
-        "tags": [
-          "MeetingTranscription"
-        ],
+        "tags": ["MeetingTranscription"],
+        "summary": "Create text transcription",
+        "description": "Creates a new text-based transcription for a meeting.",
         "parameters": [
           {
             "name": "meetingId",
@@ -1546,9 +1546,9 @@
     },
     "/meetings/transcription/{meetingId}/file": {
       "post": {
-        "tags": [
-          "MeetingTranscription"
-        ],
+        "tags": ["MeetingTranscription"],
+        "summary": "Create file transcription",
+        "description": "Creates a transcription from an uploaded audio/video file.",
         "parameters": [
           {
             "name": "meetingId",
@@ -1606,9 +1606,9 @@
     },
     "/meetings/transcription/{transcriptionId}/embeddings": {
       "post": {
-        "tags": [
-          "MeetingTranscription"
-        ],
+        "tags": ["MeetingTranscription"],
+        "summary": "Create embeddings",
+        "description": "Generates embeddings for a transcription for improved search and analysis.",
         "parameters": [
           {
             "name": "transcriptionId",
@@ -1646,9 +1646,9 @@
     },
     "/meetings/transcription/{transcriptionId}/output-audio": {
       "post": {
-        "tags": [
-          "MeetingTranscription"
-        ],
+        "tags": ["MeetingTranscription"],
+        "summary": "Create output audio",
+        "description": "Generates an audio version of the meeting synopsis.",
         "parameters": [
           {
             "name": "transcriptionId",
@@ -1717,9 +1717,9 @@
     },
     "/meetings/transcription/{transcriptionId}": {
       "delete": {
-        "tags": [
-          "MeetingTranscription"
-        ],
+        "tags": ["MeetingTranscription"],
+        "summary": "Delete transcription",
+        "description": "Deletes a transcription from the system.",
         "parameters": [
           {
             "name": "transcriptionId",
@@ -1738,9 +1738,9 @@
         }
       },
       "put": {
-        "tags": [
-          "MeetingTranscription"
-        ],
+        "tags": ["MeetingTranscription"],
+        "summary": "Update transcription",
+        "description": "Updates an existing transcription's content.",
         "parameters": [
           {
             "name": "transcriptionId",
@@ -1809,9 +1809,9 @@
     },
     "/meetings/transcription/format": {
       "post": {
-        "tags": [
-          "MeetingTranscription"
-        ],
+        "tags": ["MeetingTranscription"],
+        "summary": "Format transcription",
+        "description": "Formats a raw transcription into a more readable structure.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1878,9 +1878,9 @@
     },
     "/meetings/transcription/{meetingId}/generate": {
       "post": {
-        "tags": [
-          "MeetingTranscription"
-        ],
+        "tags": ["MeetingTranscription"],
+        "summary": "Generate transcription",
+        "description": "Generates a synthetic transcription for testing or demo purposes.",
         "parameters": [
           {
             "name": "meetingId",
@@ -1918,9 +1918,9 @@
     },
     "/meetings/transcription/token": {
       "get": {
-        "tags": [
-          "MeetingTranscription"
-        ],
+        "tags": ["MeetingTranscription"],
+        "summary": "Get token",
+        "description": "Retrieves a temporary token for real-time transcription services.",
         "responses": {
           "200": {
             "description": "OK",
@@ -1947,9 +1947,9 @@
     },
     "/navigation": {
       "get": {
-        "tags": [
-          "Navigation"
-        ],
+        "tags": ["Navigation"],
+        "summary": "Get navigation details",
+        "description": "Retrieves the navigation details.",
         "responses": {
           "200": {
             "description": "OK",
@@ -1976,9 +1976,9 @@
     },
     "/navigation/detect-country": {
       "get": {
-        "tags": [
-          "Navigation"
-        ],
+        "tags": ["Navigation"],
+        "summary": "Detect user's country",
+        "description": "Attempts to detect the user's country based on their IP address.",
         "responses": {
           "200": {
             "description": "OK",
@@ -2005,9 +2005,9 @@
     },
     "/navigation/countries": {
       "get": {
-        "tags": [
-          "Navigation"
-        ],
+        "tags": ["Navigation"],
+        "summary": "Get all countries",
+        "description": "Returns a list of all available countries and their details.",
         "responses": {
           "200": {
             "description": "OK",
@@ -2043,9 +2043,9 @@
     },
     "/navigation/check-user": {
       "get": {
-        "tags": [
-          "Navigation"
-        ],
+        "tags": ["Navigation"],
+        "summary": "Check if user exists",
+        "description": "Checks if a user with the specified email address exists in the system.",
         "parameters": [
           {
             "name": "email",
@@ -2081,9 +2081,9 @@
     },
     "/open-id/initiate/{integration}": {
       "post": {
-        "tags": [
-          "OpenId"
-        ],
+        "tags": ["OpenId"],
+        "summary": "Initiate OpenID connection",
+        "description": "Initiates an OpenID Connect authentication flow for a specific integration.",
         "parameters": [
           {
             "name": "integration",
@@ -2155,9 +2155,9 @@
     },
     "/open-id/create/{integration}": {
       "post": {
-        "tags": [
-          "OpenId"
-        ],
+        "tags": ["OpenId"],
+        "summary": "Create OpenID connection",
+        "description": "Creates an OpenID Connect connection after successful authentication.",
         "parameters": [
           {
             "name": "integration",
@@ -2212,9 +2212,9 @@
     },
     "/synopsis/templates": {
       "post": {
-        "tags": [
-          "SynopsisTemplate"
-        ],
+        "tags": ["SynopsisTemplate"],
+        "summary": "Create synopsis template",
+        "description": "Creates a new synopsis template.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2270,9 +2270,9 @@
         }
       },
       "get": {
-        "tags": [
-          "SynopsisTemplate"
-        ],
+        "tags": ["SynopsisTemplate"],
+        "summary": "Get synopsis templates",
+        "description": "Retrieves a paginated list of synopsis templates.",
         "parameters": [
           {
             "name": "IsArchived",
@@ -2342,9 +2342,9 @@
     },
     "/synopsis/templates/{defaultTemplateId}": {
       "post": {
-        "tags": [
-          "SynopsisTemplate"
-        ],
+        "tags": ["SynopsisTemplate"],
+        "summary": "Create from default template",
+        "description": "Creates a new synopsis template based on a default template.",
         "parameters": [
           {
             "name": "defaultTemplateId",
@@ -2382,9 +2382,9 @@
     },
     "/synopsis/templates/defaults": {
       "get": {
-        "tags": [
-          "SynopsisTemplate"
-        ],
+        "tags": ["SynopsisTemplate"],
+        "summary": "Get default templates",
+        "description": "Retrieves a paginated list of default synopsis templates.",
         "parameters": [
           {
             "name": "Cursor",
@@ -2447,9 +2447,9 @@
     },
     "/synopsis/templates/{id}": {
       "get": {
-        "tags": [
-          "SynopsisTemplate"
-        ],
+        "tags": ["SynopsisTemplate"],
+        "summary": "Get synopsis template",
+        "description": "Retrieves details of a specific synopsis template.",
         "parameters": [
           {
             "name": "id",
@@ -2485,9 +2485,9 @@
         }
       },
       "put": {
-        "tags": [
-          "SynopsisTemplate"
-        ],
+        "tags": ["SynopsisTemplate"],
+        "summary": "Update synopsis template",
+        "description": "Updates an existing synopsis template.",
         "parameters": [
           {
             "name": "id",
@@ -2554,9 +2554,9 @@
         }
       },
       "delete": {
-        "tags": [
-          "SynopsisTemplate"
-        ],
+        "tags": ["SynopsisTemplate"],
+        "summary": "Delete synopsis template",
+        "description": "Deletes a synopsis template.",
         "parameters": [
           {
             "name": "id",
@@ -2577,9 +2577,9 @@
     },
     "/synopsis/templates/{id}/duplicate": {
       "post": {
-        "tags": [
-          "SynopsisTemplate"
-        ],
+        "tags": ["SynopsisTemplate"],
+        "summary": "Duplicate synopsis template",
+        "description": "Creates a copy of an existing synopsis template.",
         "parameters": [
           {
             "name": "id",
@@ -2617,9 +2617,9 @@
     },
     "/team/members": {
       "get": {
-        "tags": [
-          "Team"
-        ],
+        "tags": ["Team"],
+        "summary": "Get team members",
+        "description": "Retrieves a list of all team members.",
         "parameters": [
           {
             "name": "Search",
@@ -2664,9 +2664,9 @@
     },
     "/team/members/{userId}": {
       "get": {
-        "tags": [
-          "Team"
-        ],
+        "tags": ["Team"],
+        "summary": "Get team member details",
+        "description": "Retrieves detailed information about a specific team member.",
         "parameters": [
           {
             "name": "userId",
@@ -2704,9 +2704,9 @@
     },
     "/users": {
       "get": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
+        "summary": "Get current user",
+        "description": "Retrieves details of the currently authenticated user.",
         "responses": {
           "200": {
             "description": "OK",
@@ -2731,9 +2731,9 @@
         }
       },
       "put": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
+        "summary": "Update current user",
+        "description": "Updates the details of the currently authenticated user.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2774,9 +2774,9 @@
     },
     "/webhook/meeting/event/create": {
       "get": {
-        "tags": [
-          "Webhook"
-        ],
+        "tags": ["Webhook"],
+        "summary": "Verify create event webhook",
+        "description": "Verifies the webhook subscription for meeting creation events.",
         "parameters": [
           {
             "name": "challenge",
@@ -2810,9 +2810,9 @@
         }
       },
       "post": {
-        "tags": [
-          "Webhook"
-        ],
+        "tags": ["Webhook"],
+        "summary": "Handle meeting creation",
+        "description": "Processes webhook notifications for new meeting creation events.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2853,9 +2853,9 @@
     },
     "/webhook/meeting/event/update": {
       "get": {
-        "tags": [
-          "Webhook"
-        ],
+        "tags": ["Webhook"],
+        "summary": "Verify update event webhook",
+        "description": "Verifies the webhook subscription for meeting update events.",
         "parameters": [
           {
             "name": "challenge",
@@ -2889,9 +2889,9 @@
         }
       },
       "post": {
-        "tags": [
-          "Webhook"
-        ],
+        "tags": ["Webhook"],
+        "summary": "Handle meeting update",
+        "description": "Processes webhook notifications for meeting update events.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2932,9 +2932,9 @@
     },
     "/webhook/meeting/event/delete": {
       "get": {
-        "tags": [
-          "Webhook"
-        ],
+        "tags": ["Webhook"],
+        "summary": "Verify delete event webhook",
+        "description": "Verifies the webhook subscription for meeting deletion events.",
         "parameters": [
           {
             "name": "challenge",
@@ -2968,9 +2968,9 @@
         }
       },
       "post": {
-        "tags": [
-          "Webhook"
-        ],
+        "tags": ["Webhook"],
+        "summary": "Handle meeting deletion",
+        "description": "Processes webhook notifications for meeting deletion events.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -3011,9 +3011,9 @@
     },
     "/webhook/transcript/assemblyai": {
       "post": {
-        "tags": [
-          "Webhook"
-        ],
+        "tags": ["Webhook"],
+        "summary": "Handle transcript completion",
+        "description": "Processes webhook notifications for completed transcriptions from AssemblyAI.",
         "parameters": [
           {
             "name": "TranscriptId",
@@ -3064,9 +3064,9 @@
     },
     "/webhook/note/assemblyai": {
       "post": {
-        "tags": [
-          "Webhook"
-        ],
+        "tags": ["Webhook"],
+        "summary": "Handle note transcription",
+        "description": "Processes webhook notifications for completed note transcriptions from AssemblyAI.",
         "parameters": [
           {
             "name": "NoteId",
@@ -3373,10 +3373,7 @@
         "type": "string"
       },
       "AskAiMessage": {
-        "required": [
-          "content",
-          "role"
-        ],
+        "required": ["content", "role"],
         "type": "object",
         "properties": {
           "role": {
@@ -3393,19 +3390,11 @@
         "additionalProperties": false
       },
       "AskAiRole": {
-        "enum": [
-          "System",
-          "User",
-          "Assistant",
-          "Tool"
-        ],
+        "enum": ["System", "User", "Assistant", "Tool"],
         "type": "string"
       },
       "AssemblyAiWebhookBody": {
-        "required": [
-          "status",
-          "transcript_id"
-        ],
+        "required": ["status", "transcript_id"],
         "type": "object",
         "properties": {
           "transcript_id": {
@@ -3436,10 +3425,7 @@
         "additionalProperties": false
       },
       "ClientDetails": {
-        "required": [
-          "externalId",
-          "name"
-        ],
+        "required": ["externalId", "name"],
         "type": "object",
         "properties": {
           "externalId": {
@@ -3453,10 +3439,7 @@
         "additionalProperties": false
       },
       "ClientSummary": {
-        "required": [
-          "externalId",
-          "name"
-        ],
+        "required": ["externalId", "name"],
         "type": "object",
         "properties": {
           "externalId": {
@@ -3470,11 +3453,7 @@
         "additionalProperties": false
       },
       "CompanyInviteSummary": {
-        "required": [
-          "company",
-          "email",
-          "token"
-        ],
+        "required": ["company", "email", "token"],
         "type": "object",
         "properties": {
           "email": {
@@ -3495,11 +3474,7 @@
         "additionalProperties": false
       },
       "CompanySummary": {
-        "required": [
-          "country",
-          "externalId",
-          "name"
-        ],
+        "required": ["country", "externalId", "name"],
         "type": "object",
         "properties": {
           "name": {
@@ -3548,12 +3523,7 @@
         "additionalProperties": false
       },
       "Country": {
-        "required": [
-          "code",
-          "commonName",
-          "emoji",
-          "isSupported"
-        ],
+        "required": ["code", "commonName", "emoji", "isSupported"],
         "type": "object",
         "properties": {
           "code": {
@@ -3578,9 +3548,7 @@
         "additionalProperties": false
       },
       "CreateAskAiQuestionBody": {
-        "required": [
-          "messages"
-        ],
+        "required": ["messages"],
         "type": "object",
         "properties": {
           "messages": {
@@ -3593,9 +3561,7 @@
         "additionalProperties": false
       },
       "CreateClientCommandBody": {
-        "required": [
-          "name"
-        ],
+        "required": ["name"],
         "type": "object",
         "properties": {
           "name": {
@@ -3605,10 +3571,7 @@
         "additionalProperties": false
       },
       "CreateCompanyCommandBody": {
-        "required": [
-          "countryCode",
-          "name"
-        ],
+        "required": ["countryCode", "name"],
         "type": "object",
         "properties": {
           "name": {
@@ -3621,11 +3584,7 @@
         "additionalProperties": false
       },
       "CreateMeetingCommandBody": {
-        "required": [
-          "attendees",
-          "endDateUtc",
-          "startDateUtc"
-        ],
+        "required": ["attendees", "endDateUtc", "startDateUtc"],
         "type": "object",
         "properties": {
           "startDateUtc": {
@@ -3683,9 +3642,7 @@
         "additionalProperties": false
       },
       "CreateMeetingNoteCommandBody": {
-        "required": [
-          "meetingId"
-        ],
+        "required": ["meetingId"],
         "type": "object",
         "properties": {
           "meetingId": {
@@ -3700,9 +3657,7 @@
         "additionalProperties": false
       },
       "CreateMeetingSynopsisBody": {
-        "required": [
-          "meetingId"
-        ],
+        "required": ["meetingId"],
         "type": "object",
         "properties": {
           "meetingId": {
@@ -3717,9 +3672,7 @@
         "additionalProperties": false
       },
       "CreateMeetingTranscriptionBody": {
-        "required": [
-          "transcription"
-        ],
+        "required": ["transcription"],
         "type": "object",
         "properties": {
           "transcription": {
@@ -3732,10 +3685,7 @@
         "additionalProperties": false
       },
       "CreateOpenIdConnectionRequestBody": {
-        "required": [
-          "authorizationCode",
-          "redirectUrl"
-        ],
+        "required": ["authorizationCode", "redirectUrl"],
         "type": "object",
         "properties": {
           "authorizationCode": {
@@ -3748,11 +3698,7 @@
         "additionalProperties": false
       },
       "CreateSynopsisTemplateCommandBody": {
-        "required": [
-          "color",
-          "icon",
-          "name"
-        ],
+        "required": ["color", "icon", "name"],
         "type": "object",
         "properties": {
           "name": {
@@ -3805,11 +3751,7 @@
         "additionalProperties": false
       },
       "DefaultSynopsisTemplateSummaryPaginatedResponse": {
-        "required": [
-          "items",
-          "nextCursor",
-          "total"
-        ],
+        "required": ["items", "nextCursor", "total"],
         "type": "object",
         "properties": {
           "items": {
@@ -3831,9 +3773,7 @@
         "additionalProperties": false
       },
       "EmailMeetingSynopsisBody": {
-        "required": [
-          "emailRecipient"
-        ],
+        "required": ["emailRecipient"],
         "type": "object",
         "properties": {
           "emailRecipient": {
@@ -3843,11 +3783,7 @@
         "additionalProperties": false
       },
       "File": {
-        "required": [
-          "extension",
-          "key",
-          "url"
-        ],
+        "required": ["extension", "key", "url"],
         "type": "object",
         "properties": {
           "key": {
@@ -3863,9 +3799,7 @@
         "additionalProperties": false
       },
       "FormatTranscriptionBody": {
-        "required": [
-          "transcription"
-        ],
+        "required": ["transcription"],
         "type": "object",
         "properties": {
           "transcription": {
@@ -3875,10 +3809,7 @@
         "additionalProperties": false
       },
       "GetAskClientResponse": {
-        "required": [
-          "answer",
-          "evidence"
-        ],
+        "required": ["answer", "evidence"],
         "type": "object",
         "properties": {
           "evidence": {
@@ -3894,10 +3825,7 @@
         "additionalProperties": false
       },
       "GrantSummary": {
-        "required": [
-          "id",
-          "integration"
-        ],
+        "required": ["id", "integration"],
         "type": "object",
         "properties": {
           "integration": {
@@ -3915,10 +3843,7 @@
         "additionalProperties": false
       },
       "InitiateOpenIdConnectionRequestBody": {
-        "required": [
-          "redirectUrl",
-          "state"
-        ],
+        "required": ["redirectUrl", "state"],
         "type": "object",
         "properties": {
           "redirectUrl": {
@@ -3931,9 +3856,7 @@
         "additionalProperties": false
       },
       "InitiateOpenIdConnectionResponse": {
-        "required": [
-          "authorizationUrl"
-        ],
+        "required": ["authorizationUrl"],
         "type": "object",
         "properties": {
           "authorizationUrl": {
@@ -3943,17 +3866,11 @@
         "additionalProperties": false
       },
       "Integration": {
-        "enum": [
-          "Google",
-          "Microsoft"
-        ],
+        "enum": ["Google", "Microsoft"],
         "type": "string"
       },
       "IntegrationSummary": {
-        "required": [
-          "alias",
-          "integration"
-        ],
+        "required": ["alias", "integration"],
         "type": "object",
         "properties": {
           "integration": {
@@ -3979,9 +3896,7 @@
         "additionalProperties": false
       },
       "JsonNode": {
-        "required": [
-          "root"
-        ],
+        "required": ["root"],
         "type": "object",
         "properties": {
           "options": {
@@ -4014,9 +3929,7 @@
         "additionalProperties": false
       },
       "JsonNodeOptions": {
-        "required": [
-          "propertyNameCaseInsensitive"
-        ],
+        "required": ["propertyNameCaseInsensitive"],
         "type": "object",
         "properties": {
           "propertyNameCaseInsensitive": {
@@ -4026,16 +3939,11 @@
         "additionalProperties": false
       },
       "LlmProvider": {
-        "enum": [
-          "OpenAi",
-          "Anthropic"
-        ],
+        "enum": ["OpenAi", "Anthropic"],
         "type": "string"
       },
       "MeetingAction": {
-        "required": [
-          "action"
-        ],
+        "required": ["action"],
         "type": "object",
         "properties": {
           "action": {
@@ -4049,16 +3957,11 @@
         "additionalProperties": false
       },
       "MeetingActionType": {
-        "enum": [
-          "Delete",
-          "Edit"
-        ],
+        "enum": ["Delete", "Edit"],
         "type": "string"
       },
       "MeetingAttendeeDetails": {
-        "required": [
-          "externalId"
-        ],
+        "required": ["externalId"],
         "type": "object",
         "properties": {
           "externalId": {
@@ -4081,11 +3984,7 @@
         "additionalProperties": false
       },
       "MeetingBotDetails": {
-        "required": [
-          "externalId",
-          "name",
-          "status"
-        ],
+        "required": ["externalId", "name", "status"],
         "type": "object",
         "properties": {
           "externalId": {
@@ -4108,9 +4007,7 @@
         "additionalProperties": false
       },
       "MeetingBotReference": {
-        "required": [
-          "externalId"
-        ],
+        "required": ["externalId"],
         "type": "object",
         "properties": {
           "externalId": {
@@ -4266,10 +4163,7 @@
         "additionalProperties": false
       },
       "MeetingNoteAudioFileStatus": {
-        "enum": [
-          "Transcribing",
-          "Completed"
-        ],
+        "enum": ["Transcribing", "Completed"],
         "type": "string"
       },
       "MeetingNoteDetails": {
@@ -4371,11 +4265,7 @@
         "additionalProperties": false
       },
       "MeetingSummaryPaginatedResponse": {
-        "required": [
-          "items",
-          "nextCursor",
-          "total"
-        ],
+        "required": ["items", "nextCursor", "total"],
         "type": "object",
         "properties": {
           "items": {
@@ -4397,9 +4287,7 @@
         "additionalProperties": false
       },
       "MeetingSynopsisAudioRequestBody": {
-        "required": [
-          "voice"
-        ],
+        "required": ["voice"],
         "type": "object",
         "properties": {
           "voice": {
@@ -4413,12 +4301,7 @@
         "additionalProperties": false
       },
       "MeetingSynopsisDetails": {
-        "required": [
-          "audio",
-          "externalId",
-          "lastUpdatedDateUtc",
-          "synopsis"
-        ],
+        "required": ["audio", "externalId", "lastUpdatedDateUtc", "synopsis"],
         "type": "object",
         "properties": {
           "externalId": {
@@ -4445,27 +4328,15 @@
         "additionalProperties": false
       },
       "MeetingTemporalStatus": {
-        "enum": [
-          "Past",
-          "Present",
-          "Future"
-        ],
+        "enum": ["Past", "Present", "Future"],
         "type": "string"
       },
       "MeetingTranscriptionAudioFileStatus": {
-        "enum": [
-          "Transcribing",
-          "Completed"
-        ],
+        "enum": ["Transcribing", "Completed"],
         "type": "string"
       },
       "MeetingTranscriptionDetails": {
-        "required": [
-          "audio",
-          "audioFileStatus",
-          "externalId",
-          "transcription"
-        ],
+        "required": ["audio", "audioFileStatus", "externalId", "transcription"],
         "type": "object",
         "properties": {
           "externalId": {
@@ -4498,9 +4369,7 @@
         "additionalProperties": false
       },
       "MeetingTranscriptionUtterance": {
-        "required": [
-          "text"
-        ],
+        "required": ["text"],
         "type": "object",
         "properties": {
           "startTimeMilliseconds": {
@@ -4597,9 +4466,7 @@
         "additionalProperties": false
       },
       "NavigationTokens": {
-        "required": [
-          "intercomHash"
-        ],
+        "required": ["intercomHash"],
         "type": "object",
         "properties": {
           "intercomHash": {
@@ -4609,11 +4476,7 @@
         "additionalProperties": false
       },
       "NylasEvent": {
-        "required": [
-          "grant_id",
-          "id",
-          "participants"
-        ],
+        "required": ["grant_id", "id", "participants"],
         "type": "object",
         "properties": {
           "grant_id": {
@@ -4664,10 +4527,7 @@
         "additionalProperties": false
       },
       "NylasEventWebhook": {
-        "required": [
-          "data",
-          "type"
-        ],
+        "required": ["data", "type"],
         "type": "object",
         "properties": {
           "type": {
@@ -4719,11 +4579,7 @@
         "type": "string"
       },
       "QuestionEvidence": {
-        "required": [
-          "context",
-          "distance",
-          "text"
-        ],
+        "required": ["context", "distance", "text"],
         "type": "object",
         "properties": {
           "text": {
@@ -4740,17 +4596,11 @@
         "additionalProperties": false
       },
       "SortDirection": {
-        "enum": [
-          "Ascending",
-          "Descending"
-        ],
+        "enum": ["Ascending", "Descending"],
         "type": "string"
       },
       "StreamSynopsisRequest": {
-        "required": [
-          "meetingId",
-          "provider"
-        ],
+        "required": ["meetingId", "provider"],
         "type": "object",
         "properties": {
           "meetingId": {
@@ -4768,9 +4618,7 @@
         "additionalProperties": false
       },
       "SyncCalendarMeetingsCommandBody": {
-        "required": [
-          "integration"
-        ],
+        "required": ["integration"],
         "type": "object",
         "properties": {
           "integration": {
@@ -4827,13 +4675,7 @@
         "additionalProperties": false
       },
       "SynopsisTemplateSummary": {
-        "required": [
-          "color",
-          "externalId",
-          "icon",
-          "isArchived",
-          "name"
-        ],
+        "required": ["color", "externalId", "icon", "isArchived", "name"],
         "type": "object",
         "properties": {
           "externalId": {
@@ -4856,11 +4698,7 @@
         "additionalProperties": false
       },
       "SynopsisTemplateSummaryPaginatedResponse": {
-        "required": [
-          "items",
-          "nextCursor",
-          "total"
-        ],
+        "required": ["items", "nextCursor", "total"],
         "type": "object",
         "properties": {
           "items": {
@@ -4882,10 +4720,7 @@
         "additionalProperties": false
       },
       "TeamMemberDetails": {
-        "required": [
-          "role",
-          "user"
-        ],
+        "required": ["role", "user"],
         "type": "object",
         "properties": {
           "user": {
@@ -4906,10 +4741,7 @@
         "additionalProperties": false
       },
       "TeamMemberSummary": {
-        "required": [
-          "role",
-          "user"
-        ],
+        "required": ["role", "user"],
         "type": "object",
         "properties": {
           "user": {
@@ -4930,14 +4762,7 @@
         "additionalProperties": false
       },
       "TextToSpeechVoice": {
-        "enum": [
-          "Alloy",
-          "Echo",
-          "Fable",
-          "Onyx",
-          "Nova",
-          "Shimmer"
-        ],
+        "enum": ["Alloy", "Echo", "Fable", "Onyx", "Nova", "Shimmer"],
         "type": "string"
       },
       "UpdateClientCommandBody": {
@@ -5093,13 +4918,7 @@
         "additionalProperties": false
       },
       "UserDetails": {
-        "required": [
-          "attribution",
-          "email",
-          "firstName",
-          "id",
-          "lastName"
-        ],
+        "required": ["attribution", "email", "firstName", "id", "lastName"],
         "type": "object",
         "properties": {
           "id": {
@@ -5131,18 +4950,11 @@
         "additionalProperties": false
       },
       "UserRole": {
-        "enum": [
-          "Adviser"
-        ],
+        "enum": ["Adviser"],
         "type": "string"
       },
       "UserSummary": {
-        "required": [
-          "email",
-          "firstName",
-          "id",
-          "lastName"
-        ],
+        "required": ["email", "firstName", "id", "lastName"],
         "type": "object",
         "properties": {
           "id": {
@@ -5170,9 +4982,7 @@
         "additionalProperties": false
       },
       "WebhookData": {
-        "required": [
-          "object"
-        ],
+        "required": ["object"],
         "type": "object",
         "properties": {
           "object": {
